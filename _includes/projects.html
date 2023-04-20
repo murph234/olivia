@@ -1,0 +1,13 @@
+<section>
+  <div class="project-container">
+    {% for project in site.data.settings.projects %}
+      <a href="{{ site.url }}/{{ site.baseurl }}/projects/{{ project.url }}">
+        <div class="project-unit" data-folder="{{ site.url }}/{{ site.baseurl }}/projects/{{ project.url }}" style="background-image: url({{ site.url }}/{{ site.baseurl }}/assets/img/projects/{{ project.url }}/thumbnail.png)">
+          <div class="project-overlay">
+            <strong>{{ project.name }} <i class="fa fa-arrow-right" aria-hidden="true"></i></strong>
+          </div>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
